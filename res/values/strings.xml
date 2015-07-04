@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Multi Level CSV Demo</string>
+    <string name="action_settings">Settings</string>
+    <string name="input_csv">Input (CSV)</string>
+
+    <string-array name="input_examples">
+        <item>1.1: Conventional CSV</item>
+        <item>1.2: Conventional CSV with Header</item>
+        <item>1.3: Conventional CSV with Header and Node name</item>
+        <item>1.4: Conventional CSV with Header and Node index</item>
+        <item>1.5: Multiple nodes under root</item>
+        <item>2.1: Multiple level CSV data</item>
+        <item>2.2: Multiple level CSV data with siblings</item>
+        <item>3.1: Node attributes</item>
+        <item>3.2: Node content</item>
+        <item>3.3: Quote handling</item>
+        <item>3.4: Inline comments and empty lines</item>
+        <item>3.5.1: Changing root node</item>
+        <item>3.5.2: Changing root node - data node as root</item>
+        <item>3.5.3: Changing root node - error case 1</item>
+        <item>3.5.4: Changing root node - error case 2</item>
+        <item>3.6.1: Namespaces (1)</item>
+        <item>3.6.2: Namespaces (2)</item>
+        <item>3.6.3: Namespaces (3)</item>
+        <item>3.7: Re-using node definitions</item>
+        <item>4.1: Schema - Specifying type and length</item>
+        <item>4.2: Schema - Default value</item>
+        <item>4.3.1: Schema - Null values (1)</item>
+        <item>4.3.2: Schema - Null values (2)</item>
+        <item>4.4: Schema - Precision and Scale</item>
+        <item>4.5: Schema - Date and Time</item>
+        <item>4.6: Schema - Special column \'id\'</item>
+        <item>4.7: Schema - Special column \'parent_id\'</item>
+        <item>Test Case: Quotes, Comments and Empty lines</item>
+    </string-array>
+        <string name="button">Button</string>
+        <string name="b_ddl_dml">DDL/DML</string>
+        <string name="b_json">JSON</string>
+        <string name="b_xpath">XPath:</string>
+        <string name="b_xml">XML</string>
+        <string name="b_xml2csv">XML to CSV</string>
+        <string name="tv_output">Output:</string>
+        <string name="tbPretty">Pretty?</string>
+        <string name="cbPretty">Pretty?</string>
+
+</resources>
