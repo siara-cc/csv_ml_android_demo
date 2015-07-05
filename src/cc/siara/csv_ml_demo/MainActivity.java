@@ -19,7 +19,6 @@
 package cc.siara.csv_ml_demo;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.StringReader;
 
 import org.json.simple.JSONObject;
@@ -98,11 +97,11 @@ public class MainActivity extends ActionBarActivity implements OnItemSelectedLis
 		CheckBox cbPretty = (CheckBox) findViewById(R.id.cbPretty);
 		MultiLevelCSVParser parser = new MultiLevelCSVParser();
 		try {
-			Document doc = (Document) parser.parse("dom", new StringReader(etInput.getText().toString()), false);
-			String ex_str = parser.ex.get_all_exceptions();
+			Document doc = parser.parseToDOM(new StringReader(etInput.getText().toString()), false);
+			String ex_str = parser.getEx().get_all_exceptions();
 			if (ex_str.length() > 0) {
 				Toast.makeText(getApplicationContext(), ex_str, Toast.LENGTH_SHORT).show();
-				if (parser.ex.error_code > 0) return;
+				if (parser.getEx().getErrorCode() > 0) return;
 			}
 			String xmlString = Util.docToString(doc, cbPretty.isChecked());
 	        EditText etOutput = (EditText) findViewById(R.id.etOutput);
@@ -118,11 +117,11 @@ public class MainActivity extends ActionBarActivity implements OnItemSelectedLis
 		CheckBox cbPretty = (CheckBox) findViewById(R.id.cbPretty);
 		MultiLevelCSVParser parser = new MultiLevelCSVParser();
 		try {
-			JSONObject jo = (JSONObject) parser.parse("jso", new StringReader(etInput.getText().toString()), false);
-			String ex_str = parser.ex.get_all_exceptions();
+			JSONObject jo = parser.parseToJSO(new StringReader(etInput.getText().toString()), false);
+			String ex_str = parser.getEx().get_all_exceptions();
 			if (ex_str.length() > 0) {
 				Toast.makeText(getApplicationContext(), ex_str, Toast.LENGTH_LONG).show();
-				if (parser.ex.error_code > 0) return;
+				if (parser.getEx().getErrorCode() > 0) return;
 			}
 			String outStr = null;
 			if (cbPretty.isChecked()) {
