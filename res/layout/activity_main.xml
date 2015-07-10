@@ -90,6 +90,7 @@
         android:layout_alignBaseline="@+id/btnJSON"
         android:layout_alignBottom="@+id/btnJSON"
         android:layout_toRightOf="@+id/btnJSON"
+        android:focusableInTouchMode="true"
         android:text="@string/b_xml" />
 
     <Button
@@ -151,6 +152,7 @@
         android:layout_alignBaseline="@+id/btnXML"
         android:layout_alignBottom="@+id/btnXML"
         android:layout_toRightOf="@+id/btnXML"
+        android:checked="true"
         android:text="@string/cbPretty" />
 
   </RelativeLayout>
