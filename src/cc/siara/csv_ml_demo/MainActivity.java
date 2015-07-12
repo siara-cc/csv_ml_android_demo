@@ -285,7 +285,7 @@ public class MainActivity extends ActionBarActivity implements
      * Converts XML in output text box back to csv_ml and sets to input text box
      */
     private void xmlToCSV() {
-        EditText etOutput = (EditText) findViewById(R.id.etInput);
+        EditText etOutput = (EditText) findViewById(R.id.etOutput);
         Document doc = null;
         try {
             doc = DocumentBuilderFactory
@@ -302,7 +302,6 @@ public class MainActivity extends ActionBarActivity implements
         String out_str = Outputter.generate(doc);
         EditText etInput = (EditText) findViewById(R.id.etInput);
         etInput.setText(out_str.toString());
-        etInput.setText(out_str);
         //tfInputSize.setText(String.valueOf(out_str.length()));
     }
 
@@ -402,6 +401,12 @@ public class MainActivity extends ActionBarActivity implements
         }
         if (v.getId() == R.id.btnXPath) {
             processXPath();
+        }
+        if (v.getId() == R.id.btnDDLDML) {
+            toDDLDML();
+        }
+        if (v.getId() == R.id.btnXMLtoCSV) {
+            xmlToCSV();
         }
     }
 

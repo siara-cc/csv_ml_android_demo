@@ -16,11 +16,13 @@
  * @author Arundale R.
  *
  * -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
-  android:layout_width="match_parent" 
-  android:layout_height="match_parent"
-  xmlns:tools="http://schemas.android.com/tools"
-  tools:context="cc.siara.csv_ml_demo.MainActivity" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:fillViewport="true"
+    tools:context="cc.siara.csv_ml_demo.MainActivity" >
 
   <RelativeLayout
       android:layout_width="match_parent"
@@ -57,10 +59,9 @@
         android:layout_below="@+id/spExamples"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:maxLines="6"
         android:minLines="4"
-        android:singleLine="false" 
-        android:scrollHorizontally="true">
+        android:scrollHorizontally="true"
+        android:singleLine="false" >
 
     </EditText>
 
@@ -91,6 +92,7 @@
         android:layout_alignBottom="@+id/btnJSON"
         android:layout_toRightOf="@+id/btnJSON"
         android:focusableInTouchMode="true"
+        android:focusable="true"
         android:text="@string/b_xml" />
 
     <Button
@@ -129,10 +131,10 @@
         android:layout_below="@+id/tvOutput"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:maxLines="6"
         android:minLines="3"
-        android:singleLine="false" 
-        android:scrollHorizontally="true">
+        android:overScrollMode="ifContentScrolls"
+        android:scrollHorizontally="true"
+        android:singleLine="false" >
 
     </EditText>
 
